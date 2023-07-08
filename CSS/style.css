@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    background-color: aquamarine;
+}
+
+.collapse .navbar-nav .nav-item a {
+    color: darkmagenta;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+form .btn{
+    background-color: chartreuse;
+    color: black;
+    font-weight: bold;
+}
+form .btn:hover{
+    background-color: aqua;
+}
