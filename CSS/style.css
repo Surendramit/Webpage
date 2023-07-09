@@ -19,3 +19,14 @@ form .btn{
 form .btn:hover{
     background-color: aqua;
 }
+.carousel-item img{
+    height: 70vh;
+}
+.carousel-caption p{
+    color: red;
+    font-size: 30px;
+    background-image: linear-gradient(to right, yellow,rgb(161, 232, 9));
+}
+.carousel-caption h5{
+    font-size: 50px;
+}
