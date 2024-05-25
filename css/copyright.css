@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.copyright-section {
+    /* border: 2px red solid; */
+    margin-top: 3.5rem;
+    padding: 2rem;
+
+    background-color: rgba(128, 128, 128, 0.062);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.copyright-section h1{
+    font-size: medium;
+    font-weight: 600;
+}
+
+.copyright-section p, .copyright-section ul li{
+    color: rgba(0, 0, 0, 0.63);
+}
+

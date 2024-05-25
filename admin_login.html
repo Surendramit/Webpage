@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Acumeen | Admin Login</title>
+  <link rel="stylesheet" type="text/css" href="admin/bootstrap.min.css" />
+  <link rel="icon" href="admin/logo.ico" type="image/x-icon">
+</head>
+
+<style>
+  .container{
+    width: 50%;
+    margin: auto;
+    background-color:rgba(128, 128, 128, 0.192);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .p-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .p-heading h1{
+    margin-bottom: .1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .p-body{
+    margin: 1.2rem;
+  }
+
+  .p-footer{
+    position: relative;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .btn-style{
+    margin-top: 10px;
+  }
+</style>
+
+<body>
+  <div class="container bg-dark">
+    <div class="row col-md-6 col-md-offset-3">
+      <div class="panel panel-primary p-container">
+        <div class="panel-heading text-center p-heading">
+          <h1 class="text-white">Admin Login Page</h1>
+        </div>
+        <div class="panel-body p-body">
+          <form action="admin/admin.php" method="POST">
+            <div class="form-group">
+              <label for="username" class="text-white">Username</label>
+              <input type="text" class="form-control" id="username" name="username" required />
+            </div>
+
+
+
+            <div class="form-group">
+              <label for="password" class="text-white">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+
+           
+
+            
+
+            <input type="submit" class="btn btn-primary btn-style" />
+          </form>
+        </div>
+        <!-- <div class="panel-footer text-right p-footer">
+          <small class="text-white">&copy; Acumeen Enterprises</small>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+

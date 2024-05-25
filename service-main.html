@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/service-main.css">
+   <link rel = "icon" href = 
+  "img/logo/JPG.jpg" 
+          type = "image/x-icon" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+
+  <title>Zeeals | Services</title>
+
+</head>
+
+<body>
+
+ <!-- Nav-bar -->
+ <div class="w3-top">
+  <div class="w3-bar w3-card w3-display-container" id="myNavbar">
+
+   <a href="index.html" class="w3-bar-item w3-wide logo"><img src="../img/logo/ICO (1).ico" alt=""></a>
+
+
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small nav-2 w3-display-right w3-margin-right">
+      <a href="index.html" class="w3-bar-item rel"><i class="fa fa-home home">&nbsp;</i></a>
+      <a href="about.html" class="w3-bar-item">ABOUT US</a>
+      <a href="service-main.html" class="w3-bar-item"> SERVICES</a>
+      <a href="projects.html" class="w3-bar-item">PROJECTS</a>
+      <a href="#ft-company-section" class="w3-bar-item estimate">Get Estimate</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-display-right w3-margin-right" style="    background-color: transparent !important;
+    font-size: 32px;"
+      onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+  style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index-1.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+   <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+  <a href="service-main.html" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+  <a href="#project-s" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+ 
+  <a href="#contact-s" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+
+  <main>
+
+
+    <!-- Service Section -->
+    <div class="service_wrapper">
+       <br><br>
+      <h2 class="service-heading"> Want To Build Your Dream Project ? <br> Let the Zeeals help to build it with it's services listed below
+      <hr><hr><br>
+
+      <div class="service-container">
+
+        <!-- Service-1 -> Exterior Painting -->
+        <div class="exterior-service">
+          <a href="service-2.html">
+            <img src="img/service/1.exterior.jpg" alt="">
+
+            <div class="exterior-service-text">
+              <h4 class="exterior-service-heading">Exterior Painting</h4>
+
+              <p class="exterior-service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem quibusdam quos, omnis
+                inventore iure, aut, veritatis
+                aspernatur distinctio pariatur maiores. 
+              </p>
+
+              <button class="service-btn">See More</button>
+
+            </div>
+          </a>
+        </div>
+
+         <!-- Service-2 -> Interior Painting -->
+        <div class="interior-painting exterior-service">
+          <a href="service-3.html">
+            <img src="img/service/6.turnkey-interior.jpg" alt="">
+
+            <div class=" interior-service-text exterior-service-text">
+              <h4 class="interior-service-heading exterior-service-heading">Interior Painting</h4>
+
+              <p class="interior-service-description  exterior-service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem quibusdam quos, omnis
+                inventore iure, aut, veritatis
+                aspernatur distinctio pariatur maiores.
+              </p>
+
+              <button class="service-btn">See More</button>
+
+            </div>
+          </a>
+        </div>
+
+       
+         <!-- Service-3 -> False Ceiling Design -->
+        <div class=" false-ceiling-service exterior-service">
+          <a href="service-4.html">
+            <img src="img/service/3.false-ceiling.jpg" alt="">
+
+            <div class="false-ceiling-service-text exterior-service-text">
+              <h4 class="false-ceiling-service-heading exterior-service-heading">False Ceiling Work</h4>
+
+              <p class="false-ceiling-service-description exterior-service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem quibusdam quos, omnis
+                inventore iure, aut, veritatis
+                aspernatur distinctio pariatur maiores.
+              </p>
+
+              <button class="service-btn">See More</button>
+
+            </div>
+          </a>
+        </div>
+
+
+        <!-- Service-4 -> Gypsum Plaster Work -->
+        <div class="plaster-service exterior-service">
+          <a href="service-5.html">
+            <img src="img/service/4.plaster.jpg" alt="">
+
+            <div class="plaster-service-text exterior-service-text">
+              <h4 class="plaster-service-heading exterior-service-heading">Gypsum Plaster Work</h4>
+
+              <p class="plasterr-service-description exterior-service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem quibusdam quos, omnis
+                inventore iure, aut, veritatis
+                aspernatur distinctio pariatur maiores. 
+              </p>
+
+              <button class="service-btn">See More</button>
+
+            </div>
+          </a>
+        </div>
+
+        <!-- Service-5 -> Civil Work -->
+        <div class="civil-service exterior-service">
+          <a href="service-6.html">
+            <img src="img/service/5.civil-work.jpg" alt="">
+
+            <div class="civil-service-text exterior-service-text">
+              <h4 class="civil-service-heading exterior-service-heading">Civil Work (RCC, Shuttering, ACC Block Work etc.)</h4>
+
+              <p class="civil-service-description exterior-service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem quibusdam quos, omnis
+                inventore iure, aut, veritatis
+                aspernatur distinctio pariatur maiores. 
+              </p>
+
+              <button class="service-btn">See More</button>
+
+            </div>
+          </a>
+        </div>
+
+        <!-- Service-6 ->Turnkey Interior service -->
+        <div class="turnkey-interior-service exterior-service">
+          <a href="service-7.html">
+            <img src="img/service/6.turnkey-interior.jpg" alt="">
+
+            <div class="turnkey-interior-service-text exterior-service-text">
+              <h4 class="turnkey-interior-service-heading exterior-service-heading">Turnkey Interior Design</h4>
+
+              <p class="turnkey-interior-service-description exterior-service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem quibusdam quos, omnis
+                inventore iure, aut, veritatis
+                aspernatur distinctio pariatur maiores. 
+              </p>
+
+              <button class="service-btn">See More</button>
+
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <button class="service-btn-2">Explore More</button>
+    </div>
+  </main>
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="contact-s">
+    <div class="footer-body">
+        
+         <div class="footer-header">
+            <h6 class="ft-heading-1"><a href="#"><img src="img/logo/ICO (1).ico" alt=""></a> </h6>
+               <h7>Follow us on our Social Media Pages</h7>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        
+      <div class="ft-section" id="ft-company-section">
+        <h6 class="ft-heading">About Zeeals</h6>
+        <hr>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="vision.html">Vision</a></li>
+          <li><a href="">Our Top Projects</a></li>
+          <li><a href="">Our Partners</a></li>
+          <li><a href="">Photo Gallery</a></li>
+        </ul>
+      </div>
+
+
+      <div class="ft-section" id="ft-company-section">
+        <h6 class="ft-heading">Our Services</h6>
+        <hr>
+        <ul>
+          <li><a href="">Exterior And Interior Painting</a></li>
+          <li><a href="">All Type False Ceiling Work</a></li>
+          <li><a href="">All Type Gypsum Plaster Work</a></li>
+          <li><a href="">Civil Work ( RCC, Shuttering, AAC Block Work etc )</a></li>
+          <li><a href="">Turnkey Interior Services</a></li>
+        </ul>
+      </div>
+
+
+      <div class="ft-section" id="ft-company-section">
+        <h6 class="ft-heading"> Contact Us</h6>
+        <hr>
+
+        <h6>Our Registered Head Office: <br> Zeeals</h6>
+        <p>Shop No.10, MM Road, Sai Niwas, Almeda Building, Kurla West, Mumbai Maharashtra-400070</p>
+        <span>Tel:+91 22 67525656</span><br>
+        <span>Fax:+91 22 67525858</span><br>
+        <span>Send ua a mail: <a href="mainto:info@zeeals.com">info@zeeals.com</a></span>
+
+
+      </div>
+
+
+      <!-- <hr> -->
+    </div>
+    <hr class="my-hr">
+    <div class="footer-cpy-right">
+      <div class="cpy-content">
+        <h6>&copy; 2023 Zeeals PVT LIMITED.  All rights reserved.</h6>
+      </div>
+      <div class="cpy-content">
+        <h6><a href="">COPYRIGHT & TERMS</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="">PRIVACY POLICY</a></h6>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="js/home.js"></script>
+
+
+
+</body>
+
+</html>

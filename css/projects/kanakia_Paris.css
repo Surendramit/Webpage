@@ -1,0 +1,122 @@
+.common-wrapper {
+    margin-top: 5.5rem;
+    /* height: 100vh; */
+   
+}
+
+.p-common-desc {
+    width: 90%; 
+    margin: auto;
+}
+
+
+
+.project-common-name {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1em ;
+    line-height: 1.6em;
+    background-color: #c0e2d9;
+    color: #8a3e64;
+    border: 2px red solid;
+    border-radius: 2em 0em 2em 0em;
+    /* border-radius: 50%; */
+    letter-spacing: .1em;
+    
+    /* text-align: center; */
+
+}
+
+
+
+@media (min-width:420px) {
+    .project-common-name{
+        border-radius: 8em 0;
+    }
+}
+
+.project-common-description {
+    text-align: start;
+    font-size: 1.2em;
+    /* padding: .5em; */
+    color: black;
+}
+
+
+.common-project-content-container {
+    background-color: rgba(238, 130, 238, 0.041);
+   padding: 2em 0;
+}
+
+.project-content-part-I-heading{
+    padding: 0 0 1.5em .7em !important;
+}
+
+.common-project-content {
+    padding: 1.2em;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+    
+}
+
+
+.common-project-content-img-part {
+    
+    width: 60%;
+    margin: auto;
+}
+
+.common-project-content-img-part img {
+    width: 100%;
+    margin: auto;
+    height: 45vh;
+}
+
+@media (max-width:900px) {
+    .common-project-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .common-project-content-img-part {
+        width: 100%;
+        margin: auto;
+    }
+
+    .common-project-content-img-part img {
+        width: 100%;
+        height: 40vh;
+        margin: auto;
+    }
+   .my-hr{
+    width: 100%;
+   }
+}
+
+.common-project-content-part{
+    /* border: 2px blue solid; */
+}
+
+
+.project-content-part-I-heading {
+   letter-spacing: .1em;
+    padding: 1em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.project-content-part-I-description {
+    margin-top: -3em;
+    padding: 0 1em 1em 1em;
+    font-size: 1.1em;
+    color: black;
+}

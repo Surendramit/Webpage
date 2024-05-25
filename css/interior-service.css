@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+.Interior-service-content{
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.048) , rgba(128, 128, 128, 0.11)) !important;
+    /* margin-bottom: -2rem; */
+}
+
+.Interior-service-hero-section{
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/service/jpeg-optimizer_2.interior.jpg");
+    min-height: 100%;
+    position: relative;
+    /* filter: blur(0.5px) !important;
+    -webkit-filter: blur(1px); */
+    height: 100vh;
+    width: 100vw;
+}
+
+.dis-relative{
+    position: relative;
+}
+
+.interior-animation{
+    position: absolute;
+  top: 40%;
+  left: 20%;
+  right: 20%;
+  /* background-color: rgba(0, 0, 255, 0.551); */
+  background-image: linear-gradient(
+    to right,
+    #e4d2e823,
+    rgba(0, 183, 255, 0.253)
+  );
+  display: inline;
+  box-shadow: 0 0 10px white;
+  border-radius: 10px;
+}
+
+.interior-animation p{
+    font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+  padding: 1rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-shadow: 0 0 10px black;
+}
+
+.interior-animation p:after
+{
+    animation-duration: 20s ;
+			animation-fill-mode: both ;
+			animation-iteration-count: infinite ;
+			animation-name: loading-ellipsis ;
+			animation-timing-function: linear ;
+			content: " " ;
+			display: inline-block ;
+            color: rgb(207, 17, 17);
+            text-shadow: 0 0 white;
+            /* transition-timing-function: ease-in-out; */
+}
+
+@media (max-width:600px) {
+    .interior-animation{
+        left: 0%;
+        right: 0%;
+    }
+}
+
+@keyframes loading-ellipsis {
+    0% {
+        content: "Modular Kitchen" ;
+    }
+    10% {
+        content: "False Ceiling" ;
+    }
+    20% {
+        content: "Gypsum Plaster" ;
+    }
+    30% {
+        content: "Wall Painting" ;
+    }
+    40% {
+        content: "Turnkey Interior" ;
+    }
+
+    50% {
+        content: "Bedroom" ;
+    }
+    60% {
+        content: "Bathroom" ;
+    }
+    70% {
+        content: "Study Room" ;
+    }
+    80% {
+        content: "Pooja Unit" ;
+    }
+    90%, 100% {
+        content: "General Area" ;
+    }
+}
+
+
+
+
+
+
+
+.Interior-service-content{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    background-color: rgba(255, 192, 203, 0.082);
+     
+}
+
+.Interior-service-content h3{
+    font-size: 1.7rem;
+   font-weight: 600;
+   
+   text-align: center;
+   padding:1rem;
+   letter-spacing: .03em;
+}
+
+.Interior-service-content h3 a{
+    text-decoration: none;
+}
+
+.Interior-service-content h3 a:hover{
+    color: red !important;
+}
+
+.Interior-service-content-cards-container{
+    /* border: 2px blue solid; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+   
+
+}
+
+.Interior-service-content-card{
+    /* border: 2px linear-gradient(to right, red blue) solid; */
+    width: 30%;
+    background-color: white;
+    box-shadow: 1px 3px 5px rgba(128, 128, 128, 0.37);
+}
+
+.Interior-service-content-card:hover{
+    scale: 1.01;
+    transition: ease-in-out;
+    /* cursor: pointer; */
+}
+
+@media (max-width:900px) {
+    .Interior-service-content-card{
+        width: 45%;
+    }
+}
+
+
+@media (max-width:650px) {
+    .Interior-service-content-card{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.Interior-service-content-card img{
+    max-height: 250px;
+    width: 100%;
+}
+
+
+
+.Interior-service-content-card h5{
+    text-align: center;
+    padding: .2em;
+    font-size: 1rem;
+    font-weight: 600;
+   
+}

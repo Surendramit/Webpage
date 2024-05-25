@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.service_wrapper{
+    width: 100vw;
+    /*border: 2px red solid;*/
+    background-color: rgba(128, 128, 128, 0.082);
+}
+
+.service-heading{
+    padding: 3rem;
+    color: black;
+    font-size: 2em;
+    border-radius: 5px;
+    /* letter-spacing: .1em; */
+   
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+}
+
+.service-container{
+    width: 100% ;
+    margin: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px; 
+    gap: .9rem;
+    /*border: 2px red solid;*/
+
+}
+
+
+
+.exterior-service{
+   
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: .8rem;
+    padding: .5rem;
+    position: relative;
+    background-color: rgba(47, 165, 255, 0.044);
+    transition: transform .2s ease-out;
+}
+
+.exterior-service:hover{
+
+    -ms-transform: scale(1.02); /* IE 9 */
+    -webkit-transform: scale(1.02); /* Safari 3-8 */
+    transform: scale(1.02); 
+}
+
+@media screen and (max-width:1100px) {
+    .exterior-service{
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .service-container{
+        width: 90%;
+    }
+    .exterior-service{
+        flex-basis: 90%;
+    }
+}
+
+.exterior-service a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.02rem;
+}
+
+.exterior-service a:hover{
+    text-decoration: none;
+}
+
+.exterior-service a img{
+    max-height: 500px;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.exterior-service-text{
+    margin: 0.5rem;
+    padding: .2rem;
+    width: 100%;
+   
+   
+}
+
+
+.exterior-service-heading{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: .1em;
+}
+
+.exterior-service-description{
+    margin-bottom: 2rem;
+    color: black;
+    font-size: .5em !important;
+    font-weight: 500;
+}
+
+
+.service-btn{
+    position: absolute;
+    right: -.2rem;
+    bottom: -.5rem;
+    margin: .8rem;
+    padding: .4rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 255, 0.279);
+    font-size: .5em !important;
+    font-weight: 500;
+}
+
+.service-btn-2{
+    /* position: absolute; */
+
+    color: black;
+    background-color: rgba(0, 0, 255, 0.279);
+    margin-bottom: 1rem;
+    margin-right: 10rem;
+    padding: .6rem;
+    border-radius: 5px;
+    float: center;
+    transition: transform .2s ease-out;
+    font-size: .5em !important;
+    font-weight: 500;
+    
+}
+
+.service-btn-2:hover{
+    transform: scale(1.2);
+}

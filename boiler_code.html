@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/logo/JPG.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <!-- New Feature -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+
+    <!-- End of new feature -->
+
+    <!-- Adding Slider -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Zeeals | Home</title>
+
+</head>
+
+<body>
+
+
+
+    <!-- Main Content Section -->
+    <main>
+
+        <!-- Nav-bar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-card w3-display-container" id="myNavbar">
+
+                <a href="index.html" class="w3-bar-item w3-wide logo"><img src="../img/logo/ICO (1).ico" alt=""></a>
+
+
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small nav-2 w3-display-right w3-margin-right">
+                    <a href="index.html" class="w3-bar-item rel"><i class="fa fa-home home">&nbsp;</i></a>
+                    <a href="about.html" class="w3-bar-item">ABOUT US</a>
+                    <a href="Interior_service.html" class="w3-bar-item"> SERVICES</a>
+                    <a href="projects.html" class="w3-bar-item">PROJECTS</a>
+                    <!-- <a href="" onclick="openModal()" class="w3-bar-item estimate">Get Estimate</a> -->
+
+                    <button type="button" class="inline-block rounded bg-danger-600 px-6 pt-2.5 pb-2 text-s font-medium uppercase leading-normal text-white 
+                        shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-danger-100
+                         hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]
+                          focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]
+                           focus:outline-none focus:ring-0 active:bg-danger-700 
+                           active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                        data-te-toggle="modal" data-te-target="#exampleModal" data-te-ripple-init
+                        data-te-ripple-color="light">
+                        Get Estimate
+                    </button>
+
+
+
+
+                </div>
+
+
+
+
+
+
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)"
+                    class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-display-right w3-margin-right"
+                    style="    background-color: transparent !important;
+      font-size: 32px;" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+            style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+                ×</a>
+            <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+            <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+            <a href="Interior_service.html" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+            <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+
+            <!-- <a href="" onclick="w3_close()" class="w3-bar-item w3-button">Get Estimate</a> -->
+            <button type="button" class="inline-block rounded bg-danger-600 px-6 pt-2.5 pb-2 text-s font-medium uppercase leading-normal text-white 
+            shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-danger-100
+             hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]
+              focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]
+               focus:outline-none focus:ring-0 active:bg-danger-700 
+               active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                data-te-toggle="modal" data-te-target="#exampleModal" data-te-ripple-init data-te-ripple-color="light">
+                Get Estimate
+            </button>
+        </nav>
+
+
+        <div class="dis-relative">
+            <div class="Interior-service-hero-section">
+
+            </div>
+
+            <div class="interior-animation">
+                <p>Want To Build Your Dream Project ? Let us make it real with our </p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Modal -->
+        <div data-te-modal-init
+            class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none "
+            id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div data-te-modal-dialog-ref
+                class=" wrapper pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
+                <div
+                    class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                    <div
+                        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                        <h5 class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+                            id="exampleModalLabel">
+                            Get Estimate
+                        </h5>
+                        <button type="button"
+                            class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                            data-te-modal-dismiss aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <div class="relative flex-auto p-4" data-te-modal-body-ref>
+
+                        <form action="connect.php" method="post">
+                            <label for="fname">Name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="Enter Your Name"><br>
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" name="email" placeholder="Enter your email"><br>
+
+                            <label for="mobile">Mobile No:</label>
+                            <input type="text" id="Mobile" name="mobile" placeholder="Enter your mobile Number"><br>
+
+                            <label for="address">Locality:</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your Locality"><br>
+
+                            <div class="status">
+                                <input type="checkbox">
+                                <label for="status">If you want the architecture services, please select the given
+                                    checkbox</label>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                    <div
+                        class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                        <button type="button"
+                            class="inline-block rounded bg-primary-100 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
+                            data-te-modal-dismiss data-te-ripple-init data-te-ripple-color="light">
+                            Close
+                        </button>
+                        <button type="button"
+                            class="ml-1 inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+
+        <!-- <div class="service-container" id="service-s">
+            <h2 class="service-heading">Services We Are Providing</h2>
+            <div class="service-type-container">
+
+                <div class="service" id="item-2">
+                    <a href="Interior_service.html" class="common">
+                        <img src="img/service/interior-2.webp" alt="item-1" class="image-sizing">
+                        <h3>Interior Services</h3>
+                    </a>
+                </div>
+
+                <div class="service" id="item-3">
+                    <a href="wallPaints.html" class="common">
+                        <img src="img/service/exterior-3.jpg" alt="item-1" class="image-sizing">
+
+                        <h3>Exterior Services </h3>
+                    </a>
+                </div>
+
+                <div class="service" id="item-1">
+                    <a href="modular-kitchen.html" class="common">
+                        <img src="img/service/5.civil-work.jpg" alt="item-1" class="image-sizing">
+                        <h3>Civil Work</h3>
+                    </a>
+                </div>
+               
+            </div>
+        </div> -->
+
+
+
+        <!-- <div class="slide-container-1 swiper-1">
+                <div class="slide-content-1">
+                    <div class="card-wrapper-1 swiper-wrapper-1">
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                        <div class="card-1 swiper-slide-1">
+                            <div class="image-content-1">
+                                <span class="overlay-1"></span>
+    
+                                <div class="card-image-1">
+                                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="" class="card-img-1">
+                                </div>
+                            </div>
+    
+                            <div class="card-content-1">
+                                <h2 class="name-1">David Dell</h2>
+                                <p class="description-1">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+    
+                                <button class="button-1">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-button-next-1 swiper-navBtn-1"></div>
+                <div class="swiper-button-prev-1 swiper-navBtn-1"></div>
+                <div class="swiper-pagination-1"></div>
+            </div> -->
+
+        <div class="partners-container" id="service_s">
+            <h2 class="text-center font-weight-bold" id="service-head-3">Services We Are Providing</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/service/jpeg-optimizer_2.interior.jpg" alt="item-1" class="image-sizing">
+                            <h3>Turnkey Interior</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/service/jpeg-optimizer_3.false-ceiling.jpg" alt="item-1" class="image-sizing">
+                            <h3>False Ceiling</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/service/jpeg-optimizer_4.plaster.jpg" alt="item-1" class="image-sizing">
+                            <h3>Gypsum Plaster</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/service/jpeg-optimizer_wall-painting.jpg" alt="item-1" class="image-sizing">
+                            <h3>Wall Painting</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/Services/Modular Kitchen-2/jpeg-optimizer_fabian-kuhne-eksdFRXS28s-unsplash.jpg"
+                                alt="item-1" class="image-sizing">
+                            <h3>Modular Kitchen</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/service/jpeg-optimizer_6.turnkey-interior.jpg" alt="item-1"
+                                class="image-sizing">
+                            <h3>Pooja Unit</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/Services/Bathroom-2/jpeg-optimizer_chastity-cortijo-80c0YaiSFk4-unsplash.jpg"
+                                alt="item-1" class="image-sizing">
+                            <h3>Bathroom</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/services/BedRoom-2/12.jpg" alt="item-1" class="image-sizing">
+                            <h3>Bedroom</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="Interior_service.html" class="common">
+                            <img src="img/services/Interior-2/jpeg-optimizer_collov-home-design-Pf-GjKfYGO4-unsplash.jpg"
+                                alt="item-1" class="image-sizing">
+                            <h3>Studyroom</h3>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- Ongoing  Projects Section -->
+
+        <!-- <div class="project-Section service-container" id="project-s">
+            <h2 class="Project-heading service-heading">Ongoing Projects</h2>
+            <div class="project-container service-type-container" id="ongoing_project">
+
+                <div class="project service" id="item-1">
+                    <a href="" class="common">
+                        <h3>ATS Picturesque</h3>
+                        <img src="img/project/ATS_Picturesque.jpg" alt="item-1">
+                    </a>
+                </div>
+
+                <div class="project service" id="item-1">
+                    <a href="" class="common">
+                        <h3>DLF Motinagar Delhi</h3>
+                        <img src="img/project/DLF_motinagar_delhi.jpg" alt="item-1">
+                    </a>
+                </div>
+
+
+
+
+
+                <div class="project service" id="item-1">
+                    <a href="" class="common">
+                        <h3>ATS Rhapsody</h3>
+                        <img src="img/project/ATS_Rhapsody.jpg" alt="item-1">
+                    </a>
+                </div>
+
+            </div>
+        </div> -->
+
+        <div class="partners-container" id="service_s">
+            <h2 class="text-center font-weight-bold" id="service-head-3">Ongoing Projects</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>KANAKIA GROUP</h3>
+                            <img src="img/jpeg-optimizer_kanakia_codename_future_b-powai-mumbai-kanakia_space_pvt_ltd (1).jpg"
+                                alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>DLF One Midtown</h3>
+                            <img src="img/project/jpeg-optimizer_DLF-One-Midtown-interior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>Mahagun Mirabella</h3>
+                            <img src="img/project/jpeg-optimizer_Mahagun Mirabella_interior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>ATS Rhapsody</h3>
+                            <img src="img/project/jpeg-optimizer_ats-rhapsody-interior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>Apex Athena</h3>
+                            <img src="img/project/jpeg-optimizer_Apex Athena_exterior.jfif" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>ATS Picturesque</h3>
+                            <img src="img/project/jpeg-optimizer_ATS_Picturesque_exterior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+        </div>
+
+
+        <!-- Past Projects Section -->
+
+        <!-- <div class="project-Section service-container" id="project-s">
+            <h2 class="Project-heading service-heading">Our Past Projects</h2>
+            <div class="project-container service-type-container">
+                <div class="project service" id="item-1">
+                    <a href="" class="common">
+                        <h3>KANAKIA GROUP</h3>
+                        <img src="img/kanakia_codename_future_b-powai-mumbai-kanakia_space_pvt_ltd (1).jpg"
+                            alt="item-1">
+                    </a>
+                </div>
+
+
+                <div class="project service" id="item-1">
+                    <a href="" class="common">
+                        <h3>TATA HOUSING</h3>
+                        <img src="img/project/Past_project/tata_housing_avenida-newtown-kolkata-tata_realty_and_infrastructure_limited.webp"
+                            alt="item-1">
+                    </a>
+                </div>
+
+
+                <div class="project service" id="item-1">
+                    <a href="" class="common">
+                        <h3>ATS LEE GRAND</h3>
+                        <img src="img/project/ATS_Rhapsody-2.jpg" alt="item-1">
+                    </a>
+                </div>
+
+            </div>
+        </div> -->
+
+        <div class="partners-container" id="service_s">
+            <h2 class="text-center font-weight-bold" id="service-head-3">Our Past Projects</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>Tata Housing</h3>
+                            <img src="img/project/jpeg-optimizer_Kanakia_Zen_world.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>DLF One Midtown</h3>
+                            <img src="img/project/jpeg-optimizer_DLF-One-Midtown-interior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>Mahagun Mirabella</h3>
+                            <img src="img/project/jpeg-optimizer_Mahagun Mirabella_interior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>ATS Rhapsody</h3>
+                            <img src="img/project/jpeg-optimizer_ats-rhapsody-interior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>Apex Athena</h3>
+                            <img src="img/project/jpeg-optimizer_Apex Athena_exterior.jfif" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="" class="common">
+                            <h3>ATS Picturesque</h3>
+                            <img src="img/project/jpeg-optimizer_ATS_Picturesque_exterior.jpg" alt="item-1">
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+        </div>
+
+        <!-- Testimonials Section -> An Tailwind Project -->
+
+        <!-- <div class="container my-24 px-6 mx-auto" id="testimonial-s">
+
+            <section class="mb-12 text-gray-800 text-center">
+
+                <h2 class="text-3xl font-bold mb-12 mt-12">Testimonials</h2>
+
+                <div class="grid md:grid-cols-3 gap-x-6 lg:gap-x-12">
+                    <div class="mb-12 md:mb-0">
+                        <div class="flex justify-center mb-6">
+                            
+                            <img src="img/partner/Rasesh (1).jpg" class="rounded-full shadow-lg w-32" />
+                        </div>
+                        <h5 class="text-lg font-bold mb-4">Mr. Rasesh B Kanakia</h5>
+                        <h6 class="font-medium text-blue-600 mb-4">MD | Kanakia Group</h6>
+                        <p class="mb-4">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+                                class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                                </path>
+                            </svg>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic
+                            tenetur quae quaerat ad velit ab hic tenetur.
+                        </p>
+                        <ul class="flex justify-center mb-0">
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half-alt"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 536 512">
+                                    <path fill="currentColor"
+                                        d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z">
+                                    </path>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-0">
+                        <div class="flex justify-center mb-6">
+                            <img src="img/partner/sanjay (1).jpg" class="rounded-full shadow-lg w-32" />
+                        </div>
+                        <h5 class="text-lg font-bold mb-4">Mr. Sanjay Dutt</h5>
+                        <h6 class="font-medium text-blue-600 mb-4">CEO | Tata Housing</h6>
+                        <p class="mb-4">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+                                class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                                </path>
+                            </svg>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            voluptatum deleniti atque corrupti.
+                        </p>
+                        <ul class="flex justify-center mb-0">
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                    </path>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-12 md:mb-0">
+                        <div class="flex justify-center mb-6">
+                            <img src="img/partner/RK_Arora (1).jpg" class="rounded-full shadow-lg w-32" />
+                        </div>
+                        <h5 class="text-lg font-bold mb-4">Mr. RK Arora</h5>
+                        <h6 class="font-medium text-blue-600 mb-4">MD | Supertech Limited</h6>
+                        <p class="mb-4">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+                                class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                                </path>
+                            </svg>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                            laboriosam, nisi ut aliquid commodi.
+                        </p>
+                        <ul class="flex justify-center mb-0">
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+        </div> -->
+
+
+        <!-- Partners section -->
+        <div class="partners-container" id="partner-s">
+            <h2 class="text-center font-weight-bold"> Our Trusted Partners</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <img src="img/img/logo-ats-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-kohinoor-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-mahagun-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-super-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-tata-removebg-preview.png" alt="">
+                </div>
+
+                <!-- Doubled -->
+                <div class="slide">
+                    <img src="img/img/logo-ats-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-kanakia-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-kohinoor-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-mahagun-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-super-removebg-preview.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/img/logo-tata-removebg-preview.png" alt="">
+                </div>
+
+            </section>
+        </div>
+
+
+
+        <div class="faq_section">
+
+            <div class="faq_desc">
+                <h2>Frequently Asked Questions</h2>
+                <p id="faq_head">Do clear your doubts with the help of our FAQ Section.</p>
+            </div>
+
+
+            <button class="accordion">What is a FAQ page?</button>
+            <div class="panel">
+                <p>At Shopify, for example, we have a FAQ page that answers many questions that 
+                    those initially considering website platforms can use to help them learn more about our tools.</p>
+            </div>
+
+            <button class="accordion">Why do you need an FAQ section?</button>
+            <div class="panel">
+                <p>In contrast to a landing page, where the goal is to convert buyers, the Frequently 
+                    Asked Questions (FAQ) section is a part of your website where you address common concerns, questions, and objections that customers have.</p>
+            </div>
+
+            <button class="accordion">Is an FAQ section the same as a knowledge base?</button>
+            <div class="panel">
+                <p>It’s different from your About Us page where you tell the broader story behind your brand. The FAQ section, instead, 
+                    deals with the details. It's the go-to destination for finding answers to specific questions about your product or business operation.</p>
+            </div>
+
+            <button class="accordion">When is a FAQ page appropriate?</button>
+            <div class="panel">
+                <p>An FAQ page can be a distraction or an asset, depending on how you execute it.
+
+                    But to ensure that it’s the latter, here are some indications that it’s time to incorporate a FAQ page as part of your website:
+                    
+                    Customers email you with the same questions on an ongoing basis, so it’s better to address them publicly and prominently.
+                    You have or plan to create content/landing pages that you can link to and continue the journey from question to conversion.
+                    Your product/service/business raises questions and concerns that are best handled in a straightforward manner.</p>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="contact-s">
+        <div class="footer-body">
+            <div class="ft-section" id="ft-company-section">
+                <h6 class="ft-heading">About Zeeals</h6>
+                <hr>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="projects.html">Our Top Projects</a></li>
+                    <li><a href="">Our Partners</a></li>
+                    <li><a href="">Photo Gallery</a></li>
+                </ul>
+            </div>
+
+
+            <div class="ft-section" id="ft-company-section">
+                <h6 class="ft-heading">Our Services</h6>
+                <hr>
+                <ul>
+                    <li><a href="service-3.html">Exterior And Interior Painting</a></li>
+                    <li><a href="service-4.html">All Type False Ceiling Work</a></li>
+                    <li><a href="service-5.html">All Type Gypsum Plaster Work</a></li>
+                    <li><a href="service-6.html">Civil Work ( RCC, Shuttering, AAC Block Work etc )</a></li>
+                    <li><a href="service-7.html">Turnkey Interior Services</a></li>
+                </ul>
+            </div>
+
+
+            <div class="ft-section" id="ft-company-section">
+                <h6 class="ft-heading">Contact Us</h6>
+                <hr>
+
+                <h6>Head Office Zeeals</h6>
+                <p>Shop No.10, MM Road, Sai Niwas, Almeda Building, Kurla West, Mumbai Maharashtra-400070</p>
+                <span>Tel:+91 22 67525656</span><br>
+                <span>Fax:+91 22 67525858</span><br>
+                <span>Send ua a mail: <a href="mainto:info@zeeals.com">info@zeeals.com</a></span>
+
+
+            </div>
+
+
+            <!-- <hr> -->
+        </div>
+        <hr class="my-hr">
+        <div class="footer-cpy-right">
+            <div class="cpy-content">
+                <h6>&copy; 2023 Zeeals PVT LIMITED. All rights reserved.</h6>
+            </div>
+            <div class="cpy-content">
+                <h6><a href="copyright.html">COPYRIGHT & TERMS</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a
+                        href="privacy.html">PRIVACY
+                        POLICY</a></h6>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+    <!-- Swiper JS -->
+
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+
+
+    <script>
+
+        const wrapper = document.getElementsByClassName("wrapper");
+
+        window.addEventListener("load", function () {
+            showpopup();
+        })
+        function showpopup() {
+            const timeLimit = 5
+            let i = 0;
+            const timer = setInterval(function () {
+                i++;
+                if (i == timeLimit) {
+                    clearInterval(timer);
+                    wrapper.classList.add('active-popup')
+                }
+                console.log(i)
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

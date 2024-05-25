@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --main-font: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --main-b-color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+
+  font-family: var(--main-font);
+}
+
+
+.Interior-service-content{
+  background-color: rgb(128, 128, 128);
+}
+
+.Interior-service-hero-section{
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/turnkey_interior/industrial_interior/ii-2.jpg");
+    /* min-height: 100%; */
+    position: relative;
+   
+    height: 100vh;
+    width: 100vw;
+}
+
+.dis-relative{
+    position: relative;
+}
+
+.interior-animation{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    right: 20%;
+   /* background-color: rgba(0, 0, 255, 0.551); */
+   background-image: linear-gradient(to right, #e4d2e8 , rgb(0, 183, 255));
+   display: inline;
+   box-shadow: 0 0 10px white;
+   border-radius: 10px;
+}
+
+.interior-animation p{
+    font-size: 2em;
+    font-weight: 600;
+    text-shadow: 0 0 white;
+    color: #8a3e64;
+    padding: 1rem;
+    letter-spacing: .05em;
+    text-align: center;
+}
+
+.interior-animation p:after
+{
+    animation-duration: 20s ;
+			animation-fill-mode: both ;
+			animation-iteration-count: infinite ;
+			animation-name: loading-ellipsis ;
+			animation-timing-function: linear ;
+			content: " " ;
+			display: inline-block ;
+            color: white;
+            /* transition-timing-function: ease-in-out; */
+}
+
+@media (max-width:600px) {
+    .interior-animation{
+        left: 0%;
+        right: 0%;
+    }
+}
+
+
+@keyframes loading-ellipsis {
+    
+    0%, 100% {
+        content: "" ;
+    }
+}
+
+
+
+
+
+
+.Interior-service-content{
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    /* background-color: rgba(128, 128, 128, 0.040); */
+    background-color: #fff;
+     
+}
+
+.Interior-service-content h3{
+    display: block;
+    width: 92vw;
+    margin: auto;
+    font-size: 2rem;
+   font-weight: 600;
+   /* border: 2px red solid; */
+   padding:1rem;
+   letter-spacing: .03em;
+}
+
+.Interior-service-content h3 a{
+    text-decoration: none;
+}
+
+.Interior-service-content-cards-container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+    /* padding-top: 2rem; */
+    padding: 5rem;
+   
+
+}
+
+.Interior-service-content-cards-container p{
+    margin-bottom: -5rem;
+    color: black;
+}
+
+@media (max-width:600px) {
+    .Interior-service-content-cards-container{
+        padding: 5rem 1rem 1rem 1rem;
+    }
+
+    .Interior-service-content h3{
+        font-size: 1.5rem;
+        width: 100vw;
+        margin: auto;
+        
+      
+    }
+}

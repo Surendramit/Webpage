@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="woobY-lS0J4BP9wfVriyHLLDduYWhXWSuJ7WA9oDEe4" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/estimationCallback.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="title" content="Home - Acumeen" />
+    <meta name="description"
+        content="Welcome to Acumeen - Your Trusted Home Building Company! Discover exquisite interior design and tailored home solutions for a place you'll love to call home. Explore our services Now!" />
+    <meta name="keywords"
+        content="Acumeen, acumeen.com, acumeen enterprises, acumeen enterprises pvt ltd, acumeen enterprises private limited, Rampukar Singh,Interior Solutions,Interior Services, entire home solution under one roof" />
+    <meta name="author"
+        content="Acumeen Enterprises Pvt Ltd - Developed By Jitendra Gupta (B.Tech CSE 3rd Year, Central University Of Haryana)" />
+    <meta name="copyright" content="Copyright © 2023 acumeen All Rights Reserved." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.acumeen.com/" />
+    <meta property="og:title" content="Acumeen - Entire Interior Solution Under One Roof." />
+    <meta property="og:description" content=Welcome to Acumeen - Your Trusted Home Building Company! Discover exquisite
+        interior design and tailored home solutions for a place you'll love to call home. Explore our services now!" />
+
+
+
+    <link rel="icon" href="img/logo/Artboard 1@72x.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <!-- <script>
+        var resizeTimeout;
+
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function () {
+                location.reload(); // Refresh the page
+            }, 500); // Adjust the delay (in milliseconds) as needed
+        });
+    </script> -->
+
+
+
+    <title>Acumeen | Build Your Dream Space with Us </title>
+
+</head>
+
+<body>
+
+
+
+    <!-- Main Content Section -->
+    <main>
+
+        <!-- Nav-bar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-card w3-display-container" id="myNavbar">
+
+                <a href="index.html" class="w3-bar-item w3-wide logo">
+
+
+                    <img src="img/logo/Artboard 1@72x.png" alt="Acumeen_logo"> Acumeen
+
+
+                </a>
+
+
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small nav-2 w3-display-right w3-margin-right" id="navInside">
+                    <a href="index.html" class="w3-bar-item rel"><i class="fa fa-home fa-beat"></i></a>
+                    <a href="about.html" class="w3-bar-item">ABOUT US</a>
+                    <a href="Interior_service.html" class="w3-bar-item"> SERVICES</a>
+                    <a href="projects.html" class="w3-bar-item">PROJECTS</a>
+
+
+
+                    <!-- <a href="registration.html" target="_blank" class="estimation-btn w3-bar-item">Get A Callback</a> -->
+                    <button type="button" id="openPopupBtn" class="estimation-btn w3-bar-item" onclick=openPopup()>Get A
+                        Callback</button>
+
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)"
+                    class="cross w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-display-right w3-margin-right"
+                    style="    background-color: transparent !important; font-size: 32px;" onclick="w3_open()">
+                    <i class="fa fa-bars"></i> </a>
+            </div>
+        </div>
+
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large sb"
+            style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+                ×</a>
+            <a href="index.html" class="w3-bar-item rel"><i class="fa fa-home"></i></a>
+            <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+            <a href="Interior_service.html" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+            <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+
+            <button id="openPopupBtn" class="estimation-btn w3-bar-item" onclick=openPopup()>Get A
+                Callback</button>
+        </nav>
+        
+
+        <!-- Estimation popup code -->
+        <div id="popupContainer" class="popup">
+            <form action="php/registration.php" method="post" id="popupForm" class="popup-content">
+
+                <span id="btn-close-listener" class="btn-close btn-primary">X</span>
+                <div class="form-header">
+                   
+                    <img src="img/icons/support.svg" alt="">
+                    <h2>Enquiry Form</h2>
+                    <!-- <button onclick = closeCross() class="btn-close">X</button> -->
+                   
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">Fullname</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Your Full Name"/>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" required placeholder="Enter Your Email ID"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Phone Number</label>
+                    <input type="tel" class="form-control" id="mobile" name="mobile" required size="20" minlength="10"
+                        maxlength="11" placeholder="Enter Your Phone Number" />
+                </div>
+
+                <div class="form-group">
+                    <label for="architecture">Looking For Architecture Services As Well ?</label>
+
+                    <select id="architecture" name="architecture">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Not Sure">Not Sure</option>
+                        
+                    </select>
+
+                   
+                </div>
+
+
+
+                <input type="submit" class="btn btn-primary" value="submit" />
+            </form>
+        </div>
+
+        
+
+
+        <div class="dis-relative">
+            <div class="Interior-service-hero-section">
+
+            </div>
+
+            <div class="interior-animation">
+                <p>Want To Build Your Dream Project ? Let us make it real with our </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Services Section -->
+        <div class="partners-container" id="service_s">
+            <h2 class="text-center font-weight-bold" id="service-head-3">Services We Are Providing</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="turnkey_interior.html" class="common">
+                            <img src="img/Home/service/jpeg-optimizer_2.interior.jpg" alt="turnkey-interior-image"
+                                class="image-sizing">
+                            <h3>T Interior</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="false-ceiling.html" class="common">
+                            <img src="img/Home/service/jpeg-optimizer_3.false-ceiling.jpg" alt="false-ceiling-image"
+                                class="image-sizing">
+                            <h3>False Ceiling</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="plaster.html" class="common">
+                            <img src="img/Home/service/jpeg-optimizer_4.plaster.jpg" alt="pop-image"
+                                class="image-sizing">
+                            <h3>Plaster</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="wall_paints.html" class="common">
+                            <img src="img/Home/service/jpeg-optimizer_wall-painting.jpg" alt="wall-painting-image"
+                                class="image-sizing">
+                            <h3>Painting</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="u_shaped_kitchen.html" class="common">
+                            <!-- <img src="img/Services/Modular Kitchen-2/jpeg-optimizer_fabian-kuhne-eksdFRXS28s-unsplash.jpg"
+                                alt="modular-kitchen-image" class="image-sizing"> -->
+
+                                <img src="img/new photo/kitchen-2.jpeg"
+                                alt="modular-kitchen-image" class="image-sizing">
+                            <h3>M Kitchen</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="pooja_ghar.html" class="common">
+                            <img src="img/Home/service/jpeg-optimizer_6.turnkey-interior.jpg" alt="pooja-unit-image"
+                                class="image-sizing">
+                            <h3>Pooja Unit</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="bathroom.html" class="common">
+                            <img src="img/Services/Bathroom-2/jpeg-optimizer_chastity-cortijo-80c0YaiSFk4-unsplash.jpg"
+                                alt="bathroom-image" class="image-sizing">
+                            <h3>Bathroom</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="bedroom.html" class="common">
+                            <!-- <img src="img/bedroom/dorm_bedroom/d-4.jfif" alt="bedroom-image" class="image-sizing"> -->
+                            <img src="img/new photo/bedroom-3.jpeg" alt="bedroom-image" class="image-sizing">
+                            <h3>Bedroom</h3>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="service" id="item-2">
+                        <a href="studyroom.html" class="common">
+                            <img src="img/study_rooms/longe_studyRoom/WhatsApp Image 2023-04-22 at 10.49.33 PM.jpeg"
+                                alt="studyroom-image" class="image-sizing">
+                            <h3>Studyroom</h3>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- Ongoing  Projects Section -->
+
+        <svg viewBox="0 0 500 200" class="wave_border">
+            <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" fill="rgb(57, 27, 112)"></path>
+            <path d="M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0" fill="#0E7452" opacity="0.8"></path>
+            <path d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0" fill="#0E7452" opacity="0.5"></path>
+        </svg>
+
+        <div class="partners-container partners-container-1" id="service_s">
+
+            <h2 class="text-center font-weight-bold" id="service-head-3">Ongoing Projects</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="kanakia_Paris.html" class="common">
+                            <h3>KANAKIA G...</h3>
+                            <img src="img/project/kanakia_codename_future_b-powai-mumbai-kanakia_space_pvt_ltd (1).jpg"
+                                alt="kanakia-paris-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="dlf_delhi.html" class="common">
+                            <h3>DLF One M...</h3>
+                            <img src="img/project/jpeg-optimizer_DLF-One-Midtown-interior.jpg" alt="dlf-delhi-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="mahagun_merabolla.html" class="common">
+                            <h3>Mahagun Mir...</h3>
+                            <img src="img/project/jpeg-optimizer_Mahagun Mirabella_interior.jpg"
+                                alt="mahagun-mirabolla-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="ats_rhapsody.html" class="common">
+                            <h3>ATS Rhapsody</h3>
+                            <img src="img/project/jpeg-optimizer_ats-rhapsody-interior.jpg" alt="ats-rhapsody-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="apex_athena.html" class="common">
+                            <h3>Apex Athena</h3>
+                            <img src="img/project/jpeg-optimizer_Apex Athena_exterior.jfif" alt="apex-athena-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="ats_pictuesque.html" class="common">
+                            <h3>ATS Pictu...</h3>
+                            <img src="img/project/jpeg-optimizer_ATS_Picturesque_exterior.jpg"
+                                alt="ats-pictuesque-image">
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+        </div>
+
+
+
+
+
+
+        <!-- Past Projects Section -->
+
+
+        <div class="partners-container" id="service_s">
+            <h2 class="text-center font-weight-bold" id="service-head-3">Our Past Projects</h2>
+            <section class="customer-logos-1 slider">
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="tata_housing.html" class="common">
+                            <h3>Tata Housing</h3>
+                            <img src="img/project/jpeg-optimizer_Kanakia_Zen_world.jpg" alt="tata-housing-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="dlf_delhi.html" class="common">
+                            <h3>DLF One M...</h3>
+                            <img src="img/project/jpeg-optimizer_DLF-One-Midtown-interior.jpg" alt="dlf-delhi-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="mahagun_merabolla.html" class="common">
+                            <h3>Mahagun Mir...</h3>
+                            <img src="img/project/jpeg-optimizer_Mahagun Mirabella_interior.jpg"
+                                alt="mahagun-mirabolla-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="ats_rhapsody.html" class="common">
+                            <h3>ATS Rhapsody</h3>
+                            <img src="img/project/jpeg-optimizer_ats-rhapsody-interior.jpg" alt="ats-rhapsody-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="apex_athena.html" class="common">
+                            <h3>Apex Athena</h3>
+                            <img src="img/project/jpeg-optimizer_Apex Athena_exterior.jfif" alt="apex-athena-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <div class="project service" id="item-1">
+                        <a href="ats_pictuesque.html" class="common">
+                            <h3>ATS Pictu...</h3>
+                            <img src="img/project/jpeg-optimizer_ATS_Picturesque_exterior.jpg"
+                                alt="ats-pictuesque-image">
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+        </div>
+
+
+        <!-- <div class="rainbow"></div> -->
+        <!-- Partners section -->
+        <div class="partners-container" id="partner-s">
+            <h2 class="text-center font-weight-bold"> Our Trusted Partners</h2>
+            <section class="customer-logos slider">
+                <div class="slide">
+                    <img src="img/Project_logo/logo-ats-removebg-preview.png" alt="ats-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-kanakia-removebg-preview.png" alt="kanakia-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-kohinoor-removebg-preview.png" alt="kohinoor-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-mahagun-removebg-preview.png" alt="mahagun-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-super-removebg-preview.png" alt="supertech-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-tata-removebg-preview.png" alt="tata-logo">
+                </div>
+
+                <!-- Doubled -->
+                <div class="slide">
+                    <img src="img/Project_logo/logo-ats-removebg-preview.png" alt="ats-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-kanakia-removebg-preview.png" alt="kanakia-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-kohinoor-removebg-preview.png" alt="kohinoor-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-mahagun-removebg-preview.png" alt="mahagun-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-super-removebg-preview.png" alt="supertech-logo">
+                </div>
+                <div class="slide">
+                    <img src="img/Project_logo/logo-tata-removebg-preview.png" alt="tata-logo">
+                </div>
+
+            </section>
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+    <!-- Footer Section -->
+
+
+    <footer class="footer-section" id="contact-s">
+        <div class="footer-body">
+            <div class="ft-section" id="ft-company-section-1">
+                <h5 class="ft-heading">About Acumeen</h5>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="directors.html">Board Of Directors</a></li>
+                    <li><a href="branches.html">Our Offices</a></li>
+
+                    <li><a href="projects.html">Our Top Projects</a></li>
+                   
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="ft-section" id="ft-company-section-2">
+                <h5 class="ft-heading">Our Services</h5>
+
+                <ul>
+                    <li><a href="Interior_service.html">Interior Services</a></li>
+                    <li><a href="wall_paints.html">Wall Painting</a></li>
+                    <li><a href="false-ceiling.html">False Ceiling Designing</a></li>
+                    <li><a href="plaster.html">Gypsum Plaster Work</a></li>
+                    <li><a href="#5443">All Types of Civil Work</a></li>
+                </ul>
+            </div>
+
+
+            <div class="ft-section" id="ft-company-section-3">
+                <h5 class="ft-heading">Contact Us</h5>
+
+
+                <h6><i class="fa fa-building-o" aria-hidden="true"></i>&nbsp;Acumeen Enterprises</h6>
+               <p><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp; UNIT NO.FF-196, GAUR CITY CENTER, SECTOR-4 GREATER NOIDA WEST, GAUTAM BUDDHA NAGAR, UTTAR PRADESH- 201318</p>
+                <span><i class="fa fa-phone-square" aria-hidden="true"></i> &nbsp;Tel:+91 8178442431</span><br>
+
+                <span><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;<a
+                        href="mailto:info@acumeen.com">info@acumeen.com</a></span>
+            </div>
+
+            <div class="ft-section" id="ft-company-section-1">
+                <h5 class="ft-heading-1">Social Media</h5>
+                <h6>Follow us on our Social Media Pages</h6>
+                <ul class="icons">
+                    <li><a href="https://www.youtube.com/@AcumeenEnterprises" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/acumeenenterprises" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/acumeenenterprises/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/Acumeen2023" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    
+                    <!-- <li><a href="#32"><i class="fa-brands fa-whatsapp"></i></a></li> -->
+                    
+                </ul>
+            </div>
+        </div>
+        <hr class="my-hr">
+        <div class="footer-cpy-right">
+            <div class="cpy-content">
+                <h6>&copy; 2023 Acumeen Enterprises Pvt Ltd. All rights reserved.</h6>
+            </div>
+            <div class="cpy-content">
+                <h6><a href="copyright.html">COPYRIGHT & TERMS</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a
+                        href="privacy.html">PRIVACY
+                        POLICY</a></h6>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="./js/estimationCallback.js"></script>
+
+
+
+</body>
+
+</html>

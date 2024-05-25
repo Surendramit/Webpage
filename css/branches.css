@@ -1,0 +1,140 @@
+.branch-container{
+    margin-top: 2.5rem;
+    width: 100vw;
+   /* border: 2px red solid; */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --main-font: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --main-b-color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+  /* overflow-x: hidden !important; */
+
+  font-family: var(--main-font);
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../img/branch/panindia-service-network.jpg);
+    filter: brightness(1.4);
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    margin-top: 1em !important;
+    /* border: 2px blue solid; */
+}
+hr{
+    background-color:#8a3e64 !important;
+}
+
+.header .text-box h1 {
+    color: blue;
+}
+
+.header p {
+    color: yellow !important;
+}
+
+.nav-service {
+    display: inline-block;
+}
+
+.service-nav {
+    display: none;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    color: black !important;
+    
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.157);
+    /* letter-spacing: .2rem; */
+
+}
+
+
+
+
+.branch-content{
+    /* border: 2px blue solid; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.branch-details{
+    padding: 30px;
+/* border: 2px black solid; */
+width: 70%;
+margin: auto;
+}
+
+
+
+.operating-locations{
+    padding: 30px;
+    /* border: 2px red solid; */
+    width: 70%;
+    margin: auto;
+}
+
+.operating-locations p{
+    font-size: large;
+}
+
+@media(max-width:750px){
+    .header {
+        min-height: 70vh;
+    }
+    .text-box h1{
+        font-size:larger;
+    }
+
+    .branch-details{
+        padding: 10px;
+        width: 90%;
+    }
+
+    .branch-details h1{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .branch-details h3{
+        font-size: larger;
+        font-weight: 600;
+    }
+
+    .operating-locations{
+        padding: 10px;
+      
+        width: 90%;
+   
+    }
+}

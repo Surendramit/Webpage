@@ -1,0 +1,119 @@
+/* Styles for the popup container */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+}
+
+/* Styles for the popup content */
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 350px;
+    margin: 20px auto;
+   
+  }
+}
+
+.form-header {
+  margin-top: -.50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -2rem;
+  gap: 0px;
+}
+
+.form-header h2 {
+  font-size:1.6rem;
+  font-weight: 500;
+
+}
+
+.form-header img {
+  /* border: 2px red solid; */
+  height: 100px;
+  width: 200px;
+  margin-bottom: -2.5rem;
+}
+
+.btn-close {
+  position: absolute;
+  right: 2%;
+  top:1%;
+  padding:0px 10px;
+  /* border: 2px blue solid; */
+  font-size:20px;
+  font-weight: 900;
+  cursor: pointer;
+  /* color: red; */
+  background-color: blue;
+  color: white;
+  border-radius: 15%;
+}
+
+label{
+  font-weight:normal;
+}
+
+form input{
+  font-size: 30px;
+}
+
+/* Styles for the popup form elements */
+.popup-content h2 {
+  /* margin-top: 5rem; */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-content input,
+.popup-content button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #45a049;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  width: 100px;
+  outline: none;
+}

@@ -1,0 +1,120 @@
+
+
+:root {
+    --main-font: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    /* --main-b-color: white; */
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+.about-wrapper{
+    width: 100%;
+    margin-top: 0rem;
+    /* border: 2px red solid; */
+}
+
+
+
+
+
+.about-container{
+    width: 85%;
+    margin: auto;
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container img{
+    height: 60vh;
+    border-radius: 5px;
+}
+
+
+
+.about-bradcrumb{
+    font-size: smaller;
+    
+    padding: 2em;
+    border-radius: 10px;
+    /* font-weight: 600; */
+}
+
+.about-bradcrumb span{
+    color: rgb(233, 161, 141);
+    margin: .2em;
+    padding: .2em;
+    font-weight: bold;
+}
+
+.about-bradcrumb a{
+      text-decoration: none;
+      color: black;
+}
+
+.about-bradcrumb a:hover{
+    text-decoration: none;
+}
+
+.about-heading{
+    background-color: rgba(128, 128, 128, 0.078);
+    border-radius: 5px;
+    margin-top: -22px;
+    display:flex;
+    font-family: roboto slab;
+}
+
+.l-design{
+    color: red;
+    font-size: xx-large;
+    margin-right: -.1em;
+    text-shadow: 1px 2px 5px gray;
+}
+
+.l-design-2{
+    color: red;
+    font-size:medium;
+    font-weight: 900;
+    /* text-shadow: 1px 2px 5px gray; */
+}
+
+.l-design-2 strong{
+    font-weight: 800;
+}
+
+.overview-content{
+    margin-bottom: 2em;
+}
+
+.overview-content p{
+    color: black;
+}
+
+
+figcaption{
+    display: flex !important;
+    justify-content: center;
+    margin: 1em 0 0 0;
+    padding: 1em ;
+    font-weight: 700;
+    border-radius: 5px;
+    letter-spacing: .09em;
+    color: white;
+    background-image: linear-gradient(to right, red , rgb(0, 38, 255));
+    /* text-shadow: 2px 100px 10px rgba(0, 0, 0, 0.314); */
+    font-family: roboto slab;
+}
+
+p , p span{
+    /* font-family: var(--main-font); */
+    font-family: roboto slab;
+    /* font-weight: 600; */
+}

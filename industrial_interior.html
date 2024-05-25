@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/comman_gallery.css" />
+    <link rel="stylesheet" href="css/industrial_interior.css" />
+    <link rel="stylesheet" href="css/estimationCallback.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <link rel="icon" href="img/logo/Artboard 1@72x.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Damion&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <title>Acumeen | Interiors Services | Industrial Interior Designs</title>
+
+    <style>
+      .desc-container {
+        padding: 90px 40px 20px 40px;
+        background-color: rgba(0, 195, 255, 0.042);
+      }
+
+      .desc-container div {
+        width: 95%;
+        margin: auto;
+      }
+
+      .desc-container div div h1 {
+        background-image: linear-gradient(to right, #d53f3f, #ffd700, #3ed4e7);
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        /* color: #000; */
+      }
+      .desc-list {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+      .desc-container div div p {
+        color: black;
+        font-size: large;
+        /* margin-bottom: 50px; */
+      }
+      .list-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+
+      .list-image {
+        width: 50%;
+      }
+      .list-image img {
+        width: 100%;
+        border-radius: 10px;
+        max-height: 350px;
+      }
+
+      .list-content-container {
+        width: 50%;
+      }
+      .list-content-container h4 {
+        /* background-image: linear-gradient(to right, #dc143c, #ffd900, #00ffff); */
+        background-image: linear-gradient(to right, #d53f3f, #ffd700, #ec930f);
+        /* background-image: linear-gradient(to right, #BC8F8F, #FFD700, #708090); */
+        /* background: #000; */
+        -webkit-background-clip: text; /* For Safari */
+        background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      .list-content-container p {
+        font-size: large;
+        color: blue;
+      }
+
+      /* Styles for mobile devices (e.g., smartphones) */
+      @media only screen and (max-width: 767px) {
+        .desc-container div {
+          width: 99%;
+        }
+        .desc-container h1 {
+          font-size: x-large;
+        }
+        .desc-list {
+          padding-top: 0px;
+        }
+        .desc-container p {
+          font-size: medium;
+        }
+        .list-item {
+          flex-direction: column;
+        }
+        .list-content-container {
+          width: 100%;
+        }
+        .list-content-container h4 {
+          font-size: large;
+        }
+        .list-content-container p {
+          font-size: medium;
+        }
+        .list-image {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Main Content Section -->
+    <main>
+      <!-- Nav-bar -->
+      <div class="w3-top">
+        <div class="w3-bar w3-card w3-display-container" id="myNavbar">
+          <a href="index.html" class="w3-bar-item w3-wide logo">
+            <img src="img/logo/Artboard 1@72x.ico" alt="Acumeen_logo" /> Acumeen
+          </a>
+
+          <!-- Right-sided navbar links -->
+          <div
+            class="w3-right w3-hide-small nav-2 w3-display-right w3-margin-right"
+            id="navInside"
+          >
+            <a href="index.html" class="w3-bar-item rel"
+              ><i class="fa fa-home fa-beat"></i
+            ></a>
+            <a href="about.html" class="w3-bar-item">ABOUT US</a>
+            <a href="Interior_service.html" class="w3-bar-item"> SERVICES</a>
+            <a href="projects.html" class="w3-bar-item">PROJECTS</a>
+            <!-- <a href="" onclick="openModal()" class="w3-bar-item estimate">Get Estimate</a> -->
+
+            <button
+              id="openPopupBtn"
+              class="estimation-btn w3-bar-item"
+              onclick="openPopup()"
+            >
+              Get A Callback
+            </button>
+          </div>
+          <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+          <a
+            href="javascript:void(0)"
+            class="cross w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-display-right w3-margin-right"
+            style="background-color: transparent !important; font-size: 32px"
+            onclick="w3_open()"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar on small screens when clicking the menu icon -->
+      <nav
+        class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display: none"
+        id="mySidebar"
+      >
+        <a
+          href="javascript:void(0)"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-large w3-padding-16"
+          >Close ×</a
+        >
+        <a href="index.html" class="w3-bar-item rel"
+          ><i class="fa fa-home"></i
+        ></a>
+        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button"
+          >ABOUT US</a
+        >
+        <a
+          href="Interior_service.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button"
+          >SERVICES</a
+        >
+        <a
+          href="projects.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button"
+          >PROJECTS</a
+        >
+
+        <button
+          id="openPopupBtn"
+          class="estimation-btn w3-bar-item"
+          onclick="openPopup()"
+        >
+          Get A Callback
+        </button>
+      </nav>
+
+      <!-- Estimation popup code -->
+      <div id="popupContainer" class="popup">
+        <form
+          action="php/registration.php"
+          method="post"
+          id="popupForm"
+          class="popup-content"
+        >
+          <span id="btn-close-listener" class="btn-close btn-primary">X</span>
+          <div class="form-header">
+            <img src="img/icons/support.svg" alt="" />
+            <h2>Enquiry Form</h2>
+            <!-- <button onclick = closeCross() class="btn-close">X</button> -->
+          </div>
+
+          <div class="form-group">
+            <label for="fullname">Fullname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter Your Full Name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter Your Email ID"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="mobile"
+              name="mobile"
+              required
+              size="20"
+              minlength="10"
+              maxlength="11"
+              placeholder="Enter Your Phone Number"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="architecture"
+              >Looking For Architecture Services As Well ?</label
+            >
+
+            <select id="architecture" name="architecture">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="Not Sure">Not Sure</option>
+            </select>
+          </div>
+
+          <input type="submit" class="btn btn-primary" value="submit" />
+        </form>
+      </div>
+
+      <section class="Interior-service-wrapper">
+        <!--Hero Sectio Of Interior Serivce  -->
+
+        <div class="desc-container">
+          <div>
+            <div>
+              <h1>
+                Industrial Interior Design: Transforming Workspaces into Functional and Inspiring Environments
+              </h1>
+
+              <p>
+               
+
+                Welcome to Acumeen, where we redefine industrial interiors with innovative design solutions that merge form with functionality. Our industrial interior design service is dedicated to creating workspaces that not only optimize efficiency and productivity but also inspire creativity, collaboration, and well-being. From manufacturing facilities and warehouses to logistics centers and industrial offices, we specialize in crafting environments that reflect the unique needs and aspirations of modern industries.
+                
+                
+              </p>
+            </div>
+
+            <div class="desc-list">
+              <div class="list-item">
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4>Efficiency-Driven Design</h4>
+                  <p>
+                     Efficiency is the cornerstone of industrial operations. Our team of experienced designers collaborates closely with clients to understand their workflow, processes, and operational requirements, crafting design solutions that streamline operations, reduce waste, and enhance productivity. Whether it's optimizing spatial layout, improving workflow ergonomics, or integrating smart technologies, we design spaces that work as hard as you do.
+                  </p>
+                </div>
+
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/drew-coffman-KdWSqrKt4Cc-unsplash.jpg"
+                    alt="list image"
+                  />
+                </div>
+              </div>
+
+              <div class="list-item">
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/austin-distel-wawEfYdpkag-unsplash.jpg"
+                    alt="list image"
+                  />
+                </div>
+
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4> Safety and Compliance</h4>
+                  <p>
+                    Safety is non-negotiable in industrial environments. Our designers possess expertise in creating spaces that prioritize employee safety, regulatory compliance, and risk mitigation. From strategic placement of equipment and signage to ergonomic workstation design and emergency egress planning, we ensure that every aspect of the design promotes a safe and secure work environment for all stakeholders.
+                  </p>
+                </div>
+              </div>
+
+              <div class="list-item">
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4>Brand Identity and Culture</h4>
+                  <p>
+                    Your workspace is a reflection of your brand identity and organizational culture. Our industrial interior design service specializes in translating your brand values and ethos into physical spaces that inspire pride, loyalty, and collaboration among employees. Whether it's incorporating brand colors, logos, or messaging into the design, we create environments that reinforce your brand identity and foster a sense of belonging.
+                  </p>
+                </div>
+
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/jezael-melgoza-HYQvV8wWX18-unsplash.jpg"
+                    alt="list image"
+                  />
+                </div>
+              </div>
+
+              <div class="list-item">
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/malcolm-lightbody-bIGNR9azHoU-unsplash.jpg"
+                    alt="list image"
+                  />
+                </div>
+
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4>Adaptive and Future-Proof</h4>
+                  <p>
+                     In the fast-paced world of industry, adaptability is key to staying competitive. Our designs are inherently flexible, capable of accommodating evolving technologies, processes, and organizational needs. Whether you're expanding your operations, integrating new machinery, or reconfiguring your layout, we design spaces that adapt and evolve with your business, ensuring long-term functionality and relevance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="list-item">
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4> Sustainable Practices</h4>
+                  <p>
+                    Sustainability is a guiding principle in modern industrial design. Our designers prioritize eco-friendly materials, energy-efficient systems, and sustainable practices to minimize environmental impact and promote resource conservation. From daylight harvesting and passive cooling strategies to recycled materials and waste reduction initiatives, we design spaces that align with your sustainability goals and contribute to a healthier planet.
+                  </p>
+                </div>
+
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/nastya-dulhiier-NC6dc0CgXbc-unsplash.jpg"
+                    alt="list image"
+                  />
+                </div>
+              </div>
+
+              <div class="list-item">
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/standsome-worklifestyle-o9ZR9u-VSnk-unsplash.jpg"
+                    alt="list image"
+                  />
+                </div>
+
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4> Comprehensive Project Management</h4>
+                  <p>
+                    From concept to completion, we offer comprehensive project management services to ensure a seamless and successful design journey. Our team oversees every aspect of the project, from initial planning and budgeting to construction oversight and final installation, ensuring that your vision is realized with precision and excellence.
+
+
+                  </p>
+                </div>
+              </div>
+
+              <div class="list-item">
+                <!-- Text Part -->
+                <div class="list-content-container">
+                  <h4>Elevate Your Industrial Space</h4>
+                  <p>
+                     Elevate your industrial space with Acumeen. Whether you're optimizing your manufacturing floor for efficiency or creating collaborative workspaces for your logistics team, let us partner with you to transform your workspace into a hub of innovation, productivity, and inspiration.
+                  </p>
+                </div>
+
+                <!-- Image part -->
+                <div class="list-image">
+                  <img
+                    src="./new collections/industrial/pexels-cottonbro-4820658.jpg"
+                    alt="list image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content of Interior Service -->
+        <div class="Interior-service-content">
+          <!-- Main Content of Interior Service -->
+
+          <h3>Our Best Industrial Interior Designs</h3>
+
+          <div class="Interior-service-content-cards-container">
+            <!-- Service-9 -->
+            <div class="Interior-service-content-card">
+              <img src="img/update/indis.jpg" alt="" />
+
+              <!-- <h5><a href="turnkey-interior.html">Turnkey Interior</a></h5> -->
+            </div>
+
+            <!-- Service-8-->
+            <div class="Interior-service-content-card">
+              <img
+                src="img/turnkey_interior/industrial_interior/ii-2.jpg"
+                alt=""
+              />
+
+              <!-- <h5><a href="false-ceiling.html">False Ceiling</a></h5> -->
+            </div>
+
+            <!-- Service-2 -->
+
+            <div class="Interior-service-content-card">
+              <img
+                src="img/turnkey_interior/industrial_interior/ii-3.jfif"
+                alt=""
+              />
+
+              <!-- <h5><a href="gypsum.html">Gypsum Plaster</a></h5> -->
+            </div>
+
+            <!-- Service-1 -->
+            <div class="Interior-service-content-card">
+              <img
+                src="img/turnkey_interior/industrial_interior/ii-4.jpg"
+                alt=""
+              />
+
+              <!-- <h5><a href="wallPaints.html">Wall Paints</a></h5> -->
+            </div>
+
+            <!-- Service-3 -->
+            <div class="Interior-service-content-card">
+              <img
+                src="img/turnkey_interior/industrial_interior/ii-5.jfif"
+                alt=""
+              />
+
+              <!-- <h5><a href="gypsum.html">Pooja Unit</a></h5> -->
+            </div>
+
+            <!-- Service-4 -->
+            <div class="Interior-service-content-card">
+              <img
+                src="img/turnkey_interior/industrial_interior/ii-6.jfif"
+                alt=""
+              />
+
+              <!-- <h5><a href="modular-kitchen.html">Modular Kitchen</a></h5> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section" id="contact-s">
+      <div class="footer-body">
+        <div class="ft-section" id="ft-company-section-1">
+          <h5 class="ft-heading">About Acumeen</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="directors.html">Board Of Directors</a></li>
+            <li><a href="branches.html">Our Offices</a></li>
+
+            <li><a href="projects.html">Our Top Projects</a></li>
+
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="ft-section" id="ft-company-section-2">
+          <h5 class="ft-heading">Our Services</h5>
+
+          <ul>
+            <li><a href="Interior_service.html">Interior Services</a></li>
+            <li><a href="wall_paints.html">Wall Painting</a></li>
+            <li><a href="false-ceiling.html">False Ceiling Designing</a></li>
+            <li><a href="plaster.html">Gypsum Plaster Work</a></li>
+            <li><a href="#5443">All Types of Civil Work</a></li>
+          </ul>
+        </div>
+
+        <div class="ft-section" id="ft-company-section-3">
+          <h5 class="ft-heading">Contact Us</h5>
+
+          <h6>
+            <i class="fa fa-building-o" aria-hidden="true"></i>&nbsp;Acumeen
+            Enterprises
+          </h6>
+          <p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp; UNIT
+            NO.FF-196, GAUR CITY CENTER, SECTOR-4 GREATER NOIDA WEST, GAUTAM
+            BUDDHA NAGAR, UTTAR PRADESH- 201318
+          </p>
+          <span
+            ><i class="fa fa-phone-square" aria-hidden="true"></i> &nbsp;Tel:+91
+            8178442431</span
+          ><br />
+
+          <span
+            ><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;<a
+              href="mailto:info@acumeen.com"
+              >info@acumeen.com</a
+            ></span
+          >
+        </div>
+
+        <div class="ft-section" id="ft-company-section-1">
+          <h5 class="ft-heading-1">Social Media</h5>
+          <h6>Follow us on our Social Media Pages</h6>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://www.youtube.com/@AcumeenEnterprises"
+                target="_blank"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/acumeenenterprises"
+                target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/acumeenenterprises/"
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Acumeen2023" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+
+            <!-- <li><a href="#32"><i class="fa-brands fa-whatsapp"></i></a></li> -->
+          </ul>
+        </div>
+      </div>
+      <hr class="my-hr" />
+      <div class="footer-cpy-right">
+        <div class="cpy-content">
+          <h6>&copy; 2023 Acumeen Enterprises Pvt Ltd. All rights reserved.</h6>
+        </div>
+        <div class="cpy-content">
+          <h6>
+            <a href="copyright.html">COPYRIGHT & TERMS</a>&nbsp;&nbsp; |
+            &nbsp;&nbsp;<a href="privacy.html">PRIVACY POLICY</a>
+          </h6>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="js/estimationCallback.js"></script>
+  </body>
+</html>

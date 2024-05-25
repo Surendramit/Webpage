@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/estimationCallback.css">
+    <link rel="stylesheet" href="css/projects.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="icon" href="img/logo/Artboard 1@72x.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <!-- <script>
+        var resizeTimeout;
+
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function () {
+                location.reload(); // Refresh the page
+            }, 500); // Adjust the delay (in milliseconds) as needed
+        });
+    </script> -->
+
+
+
+    <title>Acumeen | Projects</title>
+
+</head>
+
+<body>
+
+
+
+    <!-- Main Content Section -->
+    <main>
+
+        <!-- Nav-bar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-card w3-display-container" id="myNavbar">
+
+                <a href="index.html" class="w3-bar-item w3-wide logo">
+
+
+                    <img src="img/logo/Artboard 1@72x.ico" alt="Acumeen_logo"> Acumeen
+
+
+                </a>
+
+
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small nav-2 w3-display-right w3-margin-right" id="navInside">
+                    <a href="index.html" class="w3-bar-item rel"><i class="fa fa-home fa-beat"></i></a>
+                    <a href="about.html" class="w3-bar-item">ABOUT US</a>
+                    <a href="Interior_service.html" class="w3-bar-item"> SERVICES</a>
+                    <a href="projects.html" class="w3-bar-item">PROJECTS</a>
+                    <!-- <a href="" onclick="openModal()" class="w3-bar-item estimate">Get Estimate</a> -->
+
+
+                    <button id="openPopupBtn" class="estimation-btn w3-bar-item" onclick=openPopup()>Get A
+                        Callback</button>
+
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)"
+                    class="cross w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-display-right w3-margin-right"
+                    style="    background-color: transparent !important; font-size: 32px;" onclick="w3_open()">
+                    <i class="fa fa-bars"></i> </a>
+            </div>
+        </div>
+
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+            style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+                ×</a>
+            <a href="index.html" class="w3-bar-item rel"><i class="fa fa-home"></i></a>
+            <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+            <a href="Interior_service.html" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+            <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+
+            <button id="openPopupBtn" class="estimation-btn w3-bar-item" onclick=openPopup()>Get A
+                Callback</button>
+        </nav>
+ <!-- Estimation popup code -->
+ <div id="popupContainer" class="popup">
+    <form action="php/registration.php" method="post" id="popupForm" class="popup-content">
+
+        <span id="btn-close-listener" class="btn-close btn-primary">X</span>
+        <div class="form-header">
+           
+            <img src="img/icons/support.svg" alt="">
+            <h2>Enquiry Form</h2>
+            <!-- <button onclick = closeCross() class="btn-close">X</button> -->
+           
+        </div>
+
+        <div class="form-group">
+            <label for="fullname">Fullname</label>
+            <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Your Full Name"/>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" name="email" required placeholder="Enter Your Email ID"/>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Phone Number</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" required size="20" minlength="10"
+                maxlength="11" placeholder="Enter Your Phone Number" />
+        </div>
+
+        <div class="form-group">
+            <label for="architecture">Looking For Architecture Services As Well ?</label>
+
+            <select id="architecture" name="architecture">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Not Sure">Not Sure</option>
+                
+            </select>
+
+           
+        </div>
+
+
+
+        <input type="submit" class="btn btn-primary" value="submit" />
+    </form>
+</div>
+        <!-- Ongoing Project Section -->
+        <section class="box">
+            <div class="projects-wrapper">
+                <h2 class="project-headingg">Our Ongoing Projects</h2>
+                <!-- <hr class="dem"> -->
+                <p class="project-sub-heading">Ongoing Projects are projects on which we are currently working. We
+                    are working on variety of great projects,
+                    Some of them are listed below. Here you can know a bit about those projects.
+                </p>
+                <!-- <hr class="dem"> -->
+                <div class="project-container">
+                   
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_dlf exterior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="dlf_delhi.html">DLF One Midtown</a> </h4>
+                            <p class="project-descc">DLF One Midtown, a newly launched residential project in Moti Nagar, 
+                                DLE Industrial Area, Kirti Nagar, Delhi. It a staggering 100 acres of lush greens. With 128 acres of greenery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_Mahagun Mirabella_interior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="mahagun-midose.html">Mahagun Midose</a> </h4>
+                            <p class="project-descc">Mahagun Midose is one the projects of Mahagun groups situated in Sector 150, Expressway, Noida-Greater Noida Expressway, Noida.
+                                 It has a staggering 7 Acres of Land with size of 1425.00 sq.ft. - 2385.00 sq.ft.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_ATS_rphasody-exterior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="ats_rhapsody.html">ATS Rhapsody</a> </h4>
+                            <p class="project-descc">ATS RHAPSODY is one the projects of ATS groups situated in at Sector 1, 
+                            Greater Noida West Noida. It has a staggering  ATS Rhapsody comes up with 1800 square feet and 2400 square.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_ATS_Picturesque_exterior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="ats_pictuesque.html">ATS Picturesque</a> </h4>
+                            <p class="project-descc">ATS Picturesque is one the projects of ATS groups situated in at A-1/401, 
+                            Tower 1, Purvanchal Silver City, Sector 93A, Noida, Uttar Pradesh. It has a staggering  ATS Picturesque comes up with 1800 square feet and 2400 square.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/Past_project/jpeg-optimizer_Supertech Romano sector118 noida.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="supertech_romano.html">Supertech Romano</a> </h4>
+                            <p class="project-descc">SUPERTECH ROMANO is one the projects of Supertech groups situated in at  Sector 118, 
+                            Noida, Uttar Pradesh. It has a staggering Supertech Romano comes up with 1020 Sq Ft.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project" id="project-1">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_Apex Athena_exterior.jfif" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="apex_athena.html">Apex Athena</a> </h4>
+                            <p class="project-descc">Apex Athena is one the projects of Apex groups situated in Sector 75, Noida, Uttar Pradesh.
+                            It has a staggering  Apex Athena comes up with 1295 square feet and 2725 square feet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Past Projects Section -->
+        <section class="box-2">
+            <div class="projects-wrapper">
+                <h2 class="project-headingg">Our Top Past Projects</h2>
+                <!-- <hr class="dem"> -->
+                <p class="project-sub-heading">Projects are the work done by us to meet our clients requirements. We
+                    have done a lots of the projetcs,
+                    Some of them are listed below. Here you can know a bit about our projects.
+                </p>
+                <!-- <hr class="dem"> -->
+                <div class="project-container">
+
+                    <div class="project" id="project-1">
+                        <div class="project-img">
+                            <img src="img/project/Past_project/tata_housing_avenida-newtown-kolkata-tata_realty_and_infrastructure_limited.webp"
+                                alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="tata_housing.html">Tata Housing Avenida</a> </h4>
+                            <p class="project-descc">The Avenida is one the projects of Tata groups situated in Plot No. II, G/7, Dorabji Tata Rd, AA II, Kolkata, West Bengal. 
+                            It has a staggering The Avenida comes up with across 13 acres area.
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_Kanakia Paris_kurla_mumbai.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="kanakia_Paris.html">Kanakia Paris</a> </h4>
+                            <p class="project-descc">Kanakia Paris is one the projects of Kanakia groups situated in F Block, Sharada Devi Rd, 
+                            opposite Ascend International SchoolBandra, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051. 
+                            It has a staggering Kanakia Paris comes up with across area 795 - 1127 sq.ft.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_Kanakia_Zen_world.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="kanakia_Zen_World.html">Kanakia Zen World</a> </h4>
+                            <p class="project-descc">Kanakia Zen World is one the projects of Kanakia groups situated in Kanjurmarg Station Rd, Saikrupa Society, Nehru Nagar, Kanjurmarg East, Mumbai, Maharashtra 400042. It has a staggering Kanakia Zen World comes up with across area 414 sq.ft - 928 sq.ft of area.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/Past_project/oberoi_esquire-goregaon_east-mumbai-oberoi_realty_builders.webp"
+                                alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="oberai_goregaon.html">Esquire</a> </h4>
+                            <p class="project-descc">Esquire is one the projects of oberoi groups situated in Near Oberoi Woods, Oberoi Garden City, 
+                            off Western Express Highway, Goregaon, Mumbai, Maharashtra 400063. It has a staggering Esquire comes up with across area 1690 Sq.ft To 1820 Sq.ft of area.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_ATS LE Grandiose_exterior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="ats_grandiose.html">ATS LE Grandiose</a> </h4>
+                            <p class="project-descc">ATS LE-GRANDIOSE is one the projects of ATS groups situated in CFFJ+WXF, PLOT NO-SC-01/C-A1 OF SPORT CITY PLOT NO-SC-01/,SECTOR-150,
+                            Sector 150, Noida, Uttar Pradesh 201310.It has a staggering ATS LE-GRANDIOSE comes up with across area 1625.0 - 3200.0 sqft. of area.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_Mahagun Mirabella_interior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="mahagun_merabolla.html">Mahagun Mirabella</a> </h4>
+                            <p class="project-descc">Mahagun Mirabella is one the projects of ATS groups situated in Plot No. 3, Sector 79, Noida, 
+                            Uttar Pradesh 201301. It has a staggering Mahagun Mirabella comes up with across area 1425.00 sq.ft. - 2385.00 sq.ft. of area.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/jpeg-optimizer_Mahagun Moderne Mart_interior.jpg" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="mahagum_modern_mart.html">Mahagun Moderne</a> </h4>
+                            <p class="project-descc">Mahagun Moderne is one the projects of Mahagun groups situated in Mantova St, Sector 78, Noida, Uttar Pradesh 201307. 
+                            It has a staggering Mahagun Moderne comes up with across area 1250 sq ft - 2840 sq ft of area.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="img/project/Past_project/Asam_cancer_care_Dibrugarh.webp" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h4 class="project-namee"><a href="asam_cancer_care.html">DIBRUGARH CANCER CENTRE</a> </h4>
+                            <p class="project-descc">DIBRUGARH CANCER CENTRE is one the projects of Assam Cancer Care groups situated in Dibrugarh Cancer Centre, Near Namghar, Assam Medical College Campus, Dibrugarh, Assam, 786002.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <footer class="footer-section" id="contact-s">
+        <div class="footer-body">
+            <div class="ft-section" id="ft-company-section-1">
+                <h5 class="ft-heading">About Acumeen</h5>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="directors.html">Board Of Directors</a></li>
+                    <li><a href="branches.html">Our Offices</a></li>
+
+                    <li><a href="projects.html">Our Top Projects</a></li>
+                  
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="ft-section" id="ft-company-section-2">
+                <h5 class="ft-heading">Our Services</h5>
+
+                <ul>
+                    <li><a href="Interior_service.html">Interior Services</a></li>
+                    <li><a href="wall_paints.html">Wall Painting</a></li>
+                    <li><a href="false-ceiling.html">False Ceiling Designing</a></li>
+                    <li><a href="plaster.html">Gypsum Plaster Work</a></li>
+                    <li><a href="#5443">All Types of Civil Work</a></li>
+                </ul>
+            </div>
+
+
+            <div class="ft-section" id="ft-company-section-3">
+                <h5 class="ft-heading">Contact Us</h5>
+
+
+                <h6><i class="fa fa-building-o" aria-hidden="true"></i>&nbsp;Acumeen Enterprises</h6>
+               <p><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp; UNIT NO.FF-196, GAUR CITY CENTER, SECTOR-4 GREATER NOIDA WEST, GAUTAM BUDDHA NAGAR, UTTAR PRADESH- 201318</p>
+                <span><i class="fa fa-phone-square" aria-hidden="true"></i> &nbsp;Tel:+91 8178442431</span><br>
+                
+                <span><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;<a href="mailto:info@acumeen.com">info@acumeen.com</a></span>
+            </div>
+
+            <div class="ft-section" id="ft-company-section-1">
+                <h5 class="ft-heading-1">Social Media</h5>
+                <h6>Follow us on our Social Media Pages</h6>
+                <ul class="icons">
+                    <li><a href="https://www.youtube.com/@AcumeenEnterprises" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/acumeenenterprises" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/acumeenenterprises/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/Acumeen2023" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    
+                    <!-- <li><a href="#32"><i class="fa-brands fa-whatsapp"></i></a></li> -->
+                    
+                </ul>
+            </div>
+        </div>
+        <hr class="my-hr">
+        <div class="footer-cpy-right">
+            <div class="cpy-content">
+                <h6>&copy; 2023 Acumeen Enterprises Pvt Ltd. All rights reserved.</h6>
+            </div>
+            <div class="cpy-content">
+                <h6><a href="copyright.html">COPYRIGHT & TERMS</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a
+                        href="privacy.html">PRIVACY
+                        POLICY</a></h6>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="js/estimationCallback.js"></script>
+
+</body>
+
+</html>
